@@ -1,7 +1,7 @@
 from __future__ import division
+from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
 from sklearn import datasets
-from sklearn.neighbors import KNeighborsClassifier
     
 iris = datasets.load_iris()
 iris_X = iris.data
@@ -29,7 +29,7 @@ print "Only " + str(accuracy(prediction, iris_y_test)) + " data point was classi
 
 print "In other words, there was " + str(int((1 - accuracy(prediction, iris_y_test)/len(prediction))*100))+"%" + " accuracy"
 
-#knn.score(iris_X_train, iris_y_train)
+knn.score(iris_X_train, iris_y_train)
 knn.score(iris_X_test, iris_y_test)
 
 import pylab as pl
